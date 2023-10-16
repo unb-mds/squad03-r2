@@ -53,6 +53,11 @@ mat-sidenav-content{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline;
+    cursor: pointer;
+}
+
+.active{
+  background-color: #3a2950
 }
 
 mat-divider {

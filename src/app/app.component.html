@@ -1,35 +1,23 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened>
-    <h1 class="titulo-sidebar">LicitAL</h1>
+    <h1 class="titulo-sidebar" routerLink="home">LicitAL</h1>
 
     <div style="margin-top: 16px;">
       <mat-divider></mat-divider>
 
-      <button mat-button class="menu-button" style="color: #EFF2FB;" routerLink="/">
+      <button mat-button class="menu-button" style="color: #EFF2FB;" [routerLinkActive]="'active'"  routerLink="home">
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
 
-      <button mat-button class="menu-button" style="color: #EFF2FB;" routerLink="/about">
+      <button mat-button class="menu-button" style="color: #EFF2FB;" [routerLinkActive]="'active'" routerLink="about">
         <mat-icon>info</mat-icon>
         <span>Sobre</span>
       </button>
     </div>
   </mat-sidenav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
 
-  <mat-sidenav-content class="content mat-elevation-4" style="margin-left: 216px;">
-
-    <mat-icon class="icone"> place</mat-icon>
-    <select style="background-color: #533A71">
-      <option selected value="0">Selecione</option>
-      <option value="1">Maragogi</option>
-      <option value="2">Maceio</option>
-      <option value="3">Seila</option>
-    </select>
-
-    <div class="chart mat-elevation-z4">
-      <canvas #meuCanvas></canvas>
-    </div>
-
-  </mat-sidenav-content>
 </mat-sidenav-container>
