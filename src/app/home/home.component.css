@@ -50,7 +50,7 @@ mat-sidenav-content {
   font-weight: bolder;
   font-size: 2rem;
   background: -webkit-linear-gradient(left, #EFF2FB 61%, #A99CB8 50%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
 }
