@@ -41,12 +41,12 @@ mat-sidenav-content {
   justify-content: flex-start;
   font-size: 24px;
   margin-bottom: 16px;
-
-  mat-icon {
-    margin-right: 8px;
-
-  }
 }
+
+.menu-button mat-icon {
+  margin-right: 8px;
+}
+
 
 .titulo-sidebar {
   font-family: 'Poppins', sans-serif;
@@ -91,7 +91,6 @@ select {
   height: 4rem;
   width: 20rem;
   padding: 1rem 4rem 1rem 1rem;
-
   color: #EFF2FB;
   border-radius: 1em;
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
@@ -103,24 +102,21 @@ select {
   /* Centraliza horizontalmente */
   transform: translateX(-50%);
   font-size: 1.5rem;
-
-  /* Remove IE arrow */
-  &::-ms-expand {
-    display: none;
-  }
-
-  /* Remove focus outline */
-  &:focus {
-    outline: none;
-  }
-
-  /* <option> colors */
-  option {
-    color: inherit;
-    background-color: var(--option-bg);
-  }
-
 }
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+select option {
+  color: inherit;
+  background-color: var(--option-bg);
+}
+
 
 .icone {
   position: absolute;
