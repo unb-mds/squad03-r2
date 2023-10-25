@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { KnobModule } from 'primeng/knob';
+import { FormsModule } from '@angular/forms'; 
 
 const appRoute: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -27,6 +29,7 @@ const appRoute: Routes = [
     AppComponent,
     SobreComponent,
     HomeComponent
+
   ],
   imports: [
     BrowserModule, 
@@ -38,7 +41,9 @@ const appRoute: Routes = [
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    KnobModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
