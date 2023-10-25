@@ -1,27 +1,19 @@
 # Licital
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+## Instruções para executar o projeto
 
-## Development server
+1 - Você precisa ter o node instalado em sua máquina (https://nodejs.org/en/download)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2 - Após efetuar o git clone do projeto em sua máquina, é necessário rodar alguns comandos no terminal powershell dentro do projeto:
 
-## Code scaffolding
+- npm install --f
+- npm install -g @angular/cli
+- Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Como rodar o projeto localmente?
 
-## Build
+Para testar suas alterações localmente, basta inserir o comando "ng serve --open" no terminal que será executado o projeto 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Como faço para subir minhas alterações para a pagina do firebase?
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para subir o projeto para produção é necessário primeiro efetuar o comando "ng build --configuration production" e, logo após, o comando "firebase deploy". Assim, suas alterações já estarão na página principal do App
