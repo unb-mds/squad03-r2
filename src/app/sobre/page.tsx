@@ -1,4 +1,3 @@
-import { LogoGreenExonera } from "@/assets/svgs/icons";
 import Footer from "@/components/Footer";
 import { MainLayout } from "@/layouts/MainLayout";
 import Link from "next/link";
