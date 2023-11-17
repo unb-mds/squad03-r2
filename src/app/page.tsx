@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <link rel="shortcut icon" href="https://raw.githubusercontent.com/Paxxaglia/Trabalaho-de-calango-Jogo-de-adivinhacao/main/logo-licital.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <MainLayout activeButton={"Home"}>
         <Municipio municipioId={"geral"} backActive={false} ano={"geral"}>
