@@ -1,8 +1,5 @@
-import './globals.css'
-
 export const metadata = {
-  title: 'Licital',
-  description: '',
+  title: 'Licital'
 }
 
 export default function RootLayout({
