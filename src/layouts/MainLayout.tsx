@@ -37,7 +37,7 @@ export function MainLayout({ children, activeButton }: MainLayoutProps) {
       <div className="h-screen flex">
         <div className="flex flex-1">
           <Navbar activeButton={activeButton} />
-          <aside className="hidden xl:w-[28.875rem] 3xl:w-[30rem] bg-[#921daf] pl-12 pr-9 3xl:pt-12 lg:pt-9 lg:flex flex-col 3xl:gap-y-[2.6175rem] lg:gap-y-[2.5rem] relative overflow-hidden ">
+          {/* <aside className="hidden xl:w-[28.875rem] 3xl:w-[30rem] bg-[#921daf] pl-12 pr-9 3xl:pt-12 lg:pt-9 lg:flex flex-col 3xl:gap-y-[2.6175rem] lg:gap-y-[2.5rem] relative overflow-hidden ">
             <div className="w-full flex flex-col gap-y-3 3xl:gap-y-5">
               <h1 className="text-white text-5xl lg:text-[2.56rem] font-semibold max-w-[22rem]">
                 <img src="https://raw.githubusercontent.com/Paxxaglia/Trabalaho-de-calango-Jogo-de-adivinhacao/main/logo-licital.png" alt="Logo" className="w-[150rem]" />
@@ -65,7 +65,7 @@ export function MainLayout({ children, activeButton }: MainLayoutProps) {
                 <img src="https://github.com/Paxxaglia/Trabalaho-de-calango-Jogo-de-adivinhacao/blob/main/Fga-Logo.png?raw=true" className="w-[3rem]"></img>
               </div>
             </div>
-          </aside>
+          </aside> */}
         </div>
         <main className="bg-[#F5F7FB]  w-full overflow-y-auto px-[2.875rem] pt-[3.25rem] pb-6 ">
           {children}

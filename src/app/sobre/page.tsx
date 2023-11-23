@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Sobre() {
   return (
     <MainLayout activeButton={"About"}>
-      <div className="flex flex-col gap-y-4 lg:text-base min-[1792px]:text-xl text-base">
+      <div className="flex flex-col gap-y-4 lg:text-base min-[1792px]:text-xl text-base mt-3">
         <header className="flex gap-x-5 font-semibold leading-10 items-center">
           <h1 className="lg:text-[2.4375rem] text-2xl w-[21.37rem]">
             Um pouco mais sobre nosso projeto!
