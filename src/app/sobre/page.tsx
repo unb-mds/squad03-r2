@@ -41,6 +41,9 @@ export default function Sobre() {
               <strong>Douglas Marinho:</strong> Discente do curso Engenharia de Software | UnB - FGA
             </p>
             <p>
+              <strong>Esther Silva:</strong> Discente do curso Engenharia de Software | UnB - FGA
+            </p>
+            <p>
               <strong>Iago Passaglia:</strong> Discente do curso Engenharia de Software | UnB - FGA
             </p>
             <p>

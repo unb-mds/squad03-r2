@@ -12,7 +12,7 @@ const sourceSansPro = Source_Sans_Pro({
 
 interface MainLayoutProps {
   children: React.ReactNode;
-  activeButton: "Home" | "About" | "News";
+  activeButton: "Home" | "About" | "Mais" | "News";
 }
 
 export function MainLayout({ children, activeButton }: MainLayoutProps) {

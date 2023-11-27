@@ -31,7 +31,7 @@ export default function Navbar({ activeButton }: NavbarProps) {
             </Link>
           </li>
           <li className="px-4">
-            <Link href="/">
+            <Link href="/mais">
               <HomeIcon
                 className={clsx(
                   activeButton === "Mais"
