@@ -3,6 +3,7 @@ import {
   HomeIcon,
   NewsIcon,
   GithubIcon,
+  
 } from "@/assets/svgs/icons";
 import clsx from "clsx";
 import Link from "next/link";
@@ -32,7 +33,7 @@ export default function Navbar({ activeButton }: NavbarProps) {
           </li>
           <li className="px-4">
             <Link href="/mais">
-              <HomeIcon
+              <NewsIcon
                 className={clsx(
                   activeButton === "Mais"
                     ? "fill-white lg:w-8 3xl:w-auto"
@@ -53,7 +54,7 @@ export default function Navbar({ activeButton }: NavbarProps) {
             </Link>
           </li>
           <li className="px-4">
-            <Link href="https://github.com/unb-mds/2023-2-Squad03" target="_blank">
+            <Link href="https://github.com/unb-mds/2023-2-Squad03" target="5">
               <GithubIcon className="fill-[#921daf] hover:fill-gray-200 lg:w-[2.31rem] 3xl:w-auto" />
             </Link>
           </li>
