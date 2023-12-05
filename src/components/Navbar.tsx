@@ -18,7 +18,7 @@ export default function Navbar({ activeButton }: NavbarProps) {
   return (
     <header className="bg-[#b156c8] w-full h-14 fixed top-0  rounded">
       <div className="container h-full flex items-center justify-center lg:justify-start">
-      <img src="https://raw.githubusercontent.com/Paxxaglia/Trabalaho-de-calango-Jogo-de-adivinhacao/main/logo-licital.png" alt="Logo" className="w-[15rem] mt-1 ml-1 sm:block" />
+      <img src="https://raw.githubusercontent.com/Paxxaglia/Trabalaho-de-calango-Jogo-de-adivinhacao/main/logo-licital.png" alt="Logo" className="w-[15rem] mt-1 ml-1 hidden md:block" />
         <ul className="flex ml-[300px] items-center space-x-4 w-full">
           <li className="px-4">
             <Link href="/">
