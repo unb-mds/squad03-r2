@@ -17,8 +17,8 @@ export default function Home() {
       <MainLayout activeButton={"Home"}>
         <Municipio municipioId={"geral"} backActive={false} ano={"geral"}>
           <TotalAtos municipio={"geral"} ano={"todos"} />
-          <CidadesNomeacao />
-          <CidadesExoneracao />
+          {/* <CidadesNomeacao />
+          <CidadesExoneracao /> */}
         </Municipio>
         <Footer />
       </MainLayout>

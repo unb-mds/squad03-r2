@@ -39,7 +39,8 @@ export default function Mais() {
           <p className="lg:text-base w-[7rem] font-normal mb-7">
             Apoio
           </p>
-          <OKBRIcon className="mb-90" />
+          <div className="w-20"> <OKBRIcon className="w-20" /></div>
+         
         </div>
       </div>
     </MainLayout>

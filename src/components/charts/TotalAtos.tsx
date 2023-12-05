@@ -6,15 +6,12 @@ const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 interface Detalhe {
   resumo: {
-    num_nomeacoes: number;
-    num_exoneracoes: number;
+    valores_gastos: number;
   };
-  num_nomeacoes: number;
-  num_exoneracoes: number;
+  valores_gastos: number;
 }
 interface DetalheAno {
-  num_nomeacoes: number;
-  num_exoneracoes: number;
+  valores_gastos: number;
 }
 
 interface TotalAtosProps {
@@ -30,8 +27,8 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
   function dadosGeraisAnos(){
     const url =
       municipio === "geral"
-        ? "https://raw.githubusercontent.com/exoonero/extrator/main/docs/site/dados/geral.json"
-        : `https://raw.githubusercontent.com/exoonero/extrator/main/docs/site/dados/${municipio}.json`;
+        ? "https://raw.githubusercontent.com/unb-mds/2023-2-Squad03-LicitAL/main/site/geral.json"
+        : `https://raw.githubusercontent.com/unb-mds/2023-2-Squad03-LicitAL/main/site/${municipio}.json`;
     
     fetch(url, {})
       .then((res) => res.json())
@@ -45,9 +42,9 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
           exoneracoes.push(0);
         }
         Object.values(detalhe).forEach((elemento) => {
-          let nomeacao = elemento.resumo.num_nomeacoes;
+          let nomeacao = elemento.resumo.valores_gastos;
           nomeacoes.push(nomeacao);
-          let exoneracao = elemento.resumo.num_exoneracoes;
+          let exoneracao = elemento.resumo.valores_gastos;
           exoneracoes.push(exoneracao);
         });
         setDataNomeacoes(nomeacoes);
@@ -55,7 +52,7 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
       });
   }
   function dadosAno() {
-    const url = `https://raw.githubusercontent.com/exoonero/extrator/main/docs/site/dados/${municipio}.json`;
+    const url = `https://raw.githubusercontent.com/unb-mds/2023-2-Squad03-LicitAL/main/site/${municipio}.json`;
     fetch(url, {})
       .then((res) => res.json())
       .then((data) => {
@@ -65,8 +62,8 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
           delete detalhe.resumo;
         for (const [mes, dados] of Object.entries(detalhe)) {
           const index = Number(mes) - 1;
-          nomeacoes[index] = dados.num_nomeacoes;
-          exoneracoes[index] = dados.num_exoneracoes;
+          nomeacoes[index] = dados.valores_gastos;
+          exoneracoes[index] = dados.valores_gastos;
         }
         setDataNomeacoes(nomeacoes);
         setDataExoneracoes(exoneracoes);
