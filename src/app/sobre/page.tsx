@@ -17,13 +17,13 @@ export default function Sobre() {
             <span className="underline decoration-solid">
               <Link href="https://ok.org.br/sobre/">Open Knowledge Brasil (OKBR)</Link>
             </span>
-            , no âmbito de uma parceria com foco no{" "}
+            , no âmbito de uma parceria com foco no{"  "}
             <span className="underline decoration-solid">
-              <Link href="https://ok.org.br/projetos/querido-diario/">projeto Querido Diário </Link>. 
+              <Link href="https://ok.org.br/projetos/querido-diario/">projeto Querido Diário.</Link>
             </span>
             Também foi aplicado grande parte do {" "}
             <span className="underline decoration-solid">
-              <Link href="https://exoonero.org/">projeto Exoonero.</Link>
+              <Link href="https://exoonero.org/">projeto Exoonero </Link>
             </span>
             como base de nosso projeto (principalmente Front-End)
           </p>
