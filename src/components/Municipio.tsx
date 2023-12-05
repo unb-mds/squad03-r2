@@ -50,7 +50,7 @@ export default function Municipio({
           <Then>
             <Link
               href="/"
-              className="bg-[#b156c8] px-6 pt-5 rounded-[82px] w-[4.5rem] h-16"
+              className="bg-[#b156c8] px-6 pt-5 rounded-[82px] w-[4.5rem] h-16 mt-5"
             >
               <BackIcon />
             </Link>

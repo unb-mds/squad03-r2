@@ -28,7 +28,7 @@ export default function Title({ municipio, ano }: TitleProps) {
     buildTitle(municipio as string);
   }, []);
   return (
-    <h1 className=" text-2xl 2xl:text-3xl 3xl:text-[2.4375rem]  font-semibold lg:w-[42.93rem] leading-10 mt-3">
+    <h1 className=" text-2xl 2xl:text-3xl 3xl:text-[2.4375rem]  font-semibold lg:w-[42.93rem] leading-10 mt-5">
       <If condition={ano === "geral"}>
         <Then>
           Acompanhe as licitações e gastos que aconteceram em
