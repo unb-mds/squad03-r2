@@ -5,6 +5,8 @@ import Link from "next/link";
 import OKBRIcon from "@/assets/svgs/okbr-icon";
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import 'toastr/build/toastr.css'; // Importe o arquivo CSS do Toastr
+import toastr from 'toastr';
 
 export default function Mais() {
 
@@ -22,14 +24,13 @@ export default function Mais() {
     }
     emailjs.send("service_bbza6m4","template_rpknht7", templateParams, "WuPfoC3iextGSpFZy")
     .then((response) => {
-      console.log("email enviado", response.status, response.text)
+      toastr.success('Mensagem enviada', 'Sucesso!');
       setEmail('');
       setMessage('');
       setNome('');
 
     }, (error)=>{
-      alert('Não foi possivel enviar o email');
-      console.log(error);
+      toastr.error('Não foi possivel enviar mensagem', 'Erro!');
     })
   }
 
