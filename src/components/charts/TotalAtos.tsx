@@ -82,7 +82,7 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
             data: dataNomeacoes,
           },
           {
-            name: "Licitações" as const,
+            name: "Quantidade de Licitações" as const,
             data: dataExoneracoes,
           },
         ] as any,
