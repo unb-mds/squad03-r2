@@ -194,6 +194,7 @@ export default function Municipio({
         <Charts>
           {children}
         </Charts>
+
       </main>
     </main>
   );
