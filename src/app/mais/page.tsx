@@ -97,7 +97,7 @@ export default function Mais() {
           </div>
         </section>
 
-      <div className="mt-[160px]">
+      <div className="mt-[30px]">
       <Footer />
       </div>
     </MainLayout>

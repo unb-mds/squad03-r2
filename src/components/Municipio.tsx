@@ -7,6 +7,7 @@ import Title from "./Title";
 import Charts from "./charts/Charts";
 import { anoSelect } from "../app/al/[municipio]/[ano]/anos"
 import { useMemo } from "react";
+import Footer from "./Footer";
 interface MunicipioProps {
   municipioId: string;
   children: React.ReactNode;
