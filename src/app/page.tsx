@@ -12,7 +12,7 @@ import { SetStateAction, useState } from "react";
 
 export default function Home() {
 
-  const [selectedOption, setSelectedOption] = useState('Gastos');
+  const [selectedOption, setSelectedOption] = useState('Quantidade de Licitações');
   const handleDropdownChange = (event: { target: { value: SetStateAction<string>; }; }) => {
     setSelectedOption(event.target.value);
   };

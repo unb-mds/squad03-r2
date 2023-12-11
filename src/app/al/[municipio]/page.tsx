@@ -25,7 +25,7 @@ interface MunicipioPageProps {
 const MunicipioPage: React.FC<MunicipioPageProps> = ({ params }) => {
 
 
-  const [selectedOption, setSelectedOption] = useState('Gastos');
+  const [selectedOption, setSelectedOption] = useState('Quantidade de Licitações');
   const handleDropdownChange = (event: { target: { value: SetStateAction<string>; }; }) => {
     setSelectedOption(event.target.value);
   };

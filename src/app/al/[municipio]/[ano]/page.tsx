@@ -19,7 +19,7 @@ export async function generateStaticParams(): Promise<Params[]> {
 
 const AnoPage: React.FC<{ params: Params }> = ({ params }) => {
   const { municipio, ano } = params;
-  const [selectedOption, setSelectedOption] = useState('Gastos');
+  const [selectedOption, setSelectedOption] = useState('Quantidade de Licitações');
   const handleDropdownChange = (event: { target: { value: SetStateAction<string>; }; }) => {
     setSelectedOption(event.target.value);
   };
