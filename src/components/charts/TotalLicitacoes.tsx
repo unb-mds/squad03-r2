@@ -6,12 +6,12 @@ const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 interface Detalhe {
   resumo: {
-    valores_gastos: number;
+    quantidade_licitacoes: number;
   };
-  valores_gastos: number;
+    quantidade_licitacoes: number;
 }
 interface DetalheAno {
-  valores_gastos: number;
+    quantidade_licitacoes: number;
 }
 
 interface TotalAtosProps {
@@ -19,7 +19,7 @@ interface TotalAtosProps {
   ano: "todos" | string;
 }
 
-export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
+export default function TotalLicitacoes({ municipio, ano }: TotalAtosProps) {
   const [dataNomeacoes, setDataNomeacoes] = useState<number[]>([]);
   const [dataExoneracoes, setDataExoneracoes] = useState<number[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
@@ -42,10 +42,10 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
           exoneracoes.push(0);
         }
         Object.values(detalhe).forEach((elemento) => {
-          let exoneracao = elemento.resumo.valores_gastos;
-          exoneracoes.push(exoneracao);
+          let nomeacao = elemento.resumo.quantidade_licitacoes;
+          nomeacoes.push(nomeacao);
         });
-        setDataExoneracoes(exoneracoes);
+        setDataNomeacoes(nomeacoes);
       });
   }
   function dadosAno() {
@@ -59,9 +59,9 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
           delete detalhe.resumo;
         for (const [mes, dados] of Object.entries(detalhe)) {
           const index = Number(mes) - 1;
-          exoneracoes[index] = dados.valores_gastos;
+          nomeacoes[index] = dados.quantidade_licitacoes;
         }
-        setDataExoneracoes(exoneracoes);
+        setDataNomeacoes(nomeacoes);
       });
   }
   useEffect(() => {
@@ -73,8 +73,8 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
       options: {
         series: [
           {
-            name: "Gasto" as const,
-            data: dataExoneracoes,
+            name: "Quantidade de Licitações" as const,
+            data: dataNomeacoes,
           },
         ] as any,
         legend: {
@@ -147,15 +147,15 @@ export default function TotalAtos({ municipio, ano }: TotalAtosProps) {
         fill: {
           opacity: 1,
         },
-        colors: ["#921daf"],
+        colors: ["#c086f4", "#921daf"],
       },
     };
-  }, [dataExoneracoes]);
+  }, [dataNomeacoes]);
 
   return (
     <section className="bg-white w-full 4xl:w-[31%] h-[19rem] 4xl:h-[22.68rem] mt-[1.875rem] 4xl:mt-[2.31rem] px-2 rounded-3xl">
       <h1 className="mb-3 font-bold text-xl text-center pt-5">
-        Gastos no período
+      Quantidade de licitações no período
       </h1>
       <Chart
         options={chartData.options}
