@@ -1,6 +1,7 @@
 {
-  "name": "exonera",
+  "name": "licital",
   "version": "0.1.0",
+  "homepage": "https://unb-mds.github.io/squad03-r2/",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -32,4 +33,5 @@
     "toastr": "^2.1.4",
     "typescript": "5.0.4"
   }
+  
 }
