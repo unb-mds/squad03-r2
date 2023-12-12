@@ -29,7 +29,7 @@ export default function Navbar({ activeButton }: NavbarProps) {
                     : "fill-[#921daf] hover:fill-gray-200 lg:w-8 3xl:w-auto"
                 )}
               />
-            </Link>
+            </Link>  
           </li>
           <li className="px-4">
             <Link href="/mais">
