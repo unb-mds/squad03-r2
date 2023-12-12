@@ -33,7 +33,7 @@ const MunicipioPage: React.FC<MunicipioPageProps> = ({ params }) => {
   return (
     <main>
       <MainLayout activeButton={"Home"}>
-        <Municipio municipioId={params.municipio} backActive={true} ano={'geral'}>
+        <Municipio municipioId={params.municipio} ano={'geral'}>
           <select value={selectedOption} onChange={handleDropdownChange} className="md:w-[10 rem] h-16 md:p-4 rounded-2xl text-lg mt-3">
             <option value="Quantidade de Licitações">Quantidade de Licitações</option>
             <option value="Gastos">Gastos</option>
