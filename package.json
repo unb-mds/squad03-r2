@@ -36,6 +36,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/prop-types": "^15.7.11",
     "encoding": "^0.1.13"
   }
 }

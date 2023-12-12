@@ -49,7 +49,7 @@ const NewsIcon: React.FC<IIconProps> = ({ ...props }) => (
       transform="translate(-1.5 -3.5)"
       fill="current-color"
       stroke="current-color"
-      stroke-width="1"
+      strokeWidth="1"
     />
   </svg>
 );

@@ -34,8 +34,7 @@ export default function Home() {
           ) : (
             <TotalAtos municipio={'geral'} ano={'todos'} />
           )}
-          {/* <CidadesNomeacao />
-          <CidadesExoneracao /> */}
+          <CidadesNomeacao />
         </Municipio>
         <Footer />
       </MainLayout>
