@@ -26,7 +26,14 @@ jobs:
         id: detect-package-manager
         run: |
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
-            yarn install
+            echo "::set-output name=manager::yarn"
+            echo "::set-output name=command::install"
+            echo "::set-output name=runner::yarn"
+            exit 0
+          elif [ -f "${{ github.workspace }}/package.json" ]; then
+            echo "::set-output name=manager::npm"
+            echo "::set-output name=command::ci"
+            echo "::set-output name=runner::npx --no-install"
             exit 0
           else
             echo "Unable to determine packager manager"
@@ -58,11 +65,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies 🥑
-        run: yarn install
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js 🍄
-        run: yarn next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js 🥯
-        run: yarn next export
+        run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact ⛱️
         uses: actions/upload-pages-artifact@v1
         with:
